@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.text.Format;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -45,7 +46,7 @@ public class DesafioApplication implements CommandLineRunner {
         order.setDiscount(porcentagemDesconto);
 
         System.out.println("Pedido código " + order.getCode());
-        System.out.println("Valor total: R$ " + orderService.total(order));
+        System.out.printf("Valor total: R$ %.2f" , orderService.total(order));
 
     }
 }
